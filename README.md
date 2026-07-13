@@ -3,6 +3,17 @@
 ## Resumo do Projeto
 Este projeto demonstra a criação de um pipeline completo de dados (ETL, Armazenamento e Business Intelligence) para analisar o funil de conversão de uma campanha de marketing digital. O objetivo de negócio foi otimizar a captação de subscritores para uma newsletter de nicho (Rock Progressivo), integrando dados de três plataformas distintas.
 
+Skills Demonstrated
+ Marketing Analytics
+ ETL
+ Python
+ SQL
+ Power BI
+ Google Analytics 4
+ Meta Ads
+ Business Intelligence
+ Data Storytelling
+
 **Resultados Principais:**
 * **Investimento:** 64,79 €
 * **Taxa de Conversão da Página:** 3.3% (16 Subscrições Finais / 481 Visitas)
@@ -27,7 +38,7 @@ O dashboard em Power BI foi desenhado com foco na experiência do utilizador e n
 *   Visitas (481) Inicio Formulario (43) Subscrições (16)
 
 
-jjjj
+adicionar foto dashboard
 
 ## Insights e Próximos Passos (Recomendação Estratégica)
 A análise detalhada do funil revelou um estrangulamento claro: embora 43 utilizadores tenham demonstrado intenção ao iniciar o formulário, apenas 16 o concluíram. 
