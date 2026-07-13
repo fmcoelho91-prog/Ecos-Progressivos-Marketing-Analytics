@@ -27,7 +27,7 @@ O dashboard em Power BI foi desenhado com foco na experiência do utilizador e n
 *   Visitas (481) Inicio Formulario (43) Subscrições (16)
 
 
-*(Nota: Adicionar aqui [Screenshot do Dashboard em Dark Mode] assim que estiver concluído)*
+jjjj
 
 ## Insights e Próximos Passos (Recomendação Estratégica)
 A análise detalhada do funil revelou um estrangulamento claro: embora 43 utilizadores tenham demonstrado intenção ao iniciar o formulário, apenas 16 o concluíram. 
