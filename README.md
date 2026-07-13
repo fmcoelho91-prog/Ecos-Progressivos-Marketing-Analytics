@@ -22,7 +22,7 @@ Skills Demonstrated
 ## Tech Stack & Arquitetura
 * **Python (pandas, sqlalchemy, pyodbc):** Extração, tratamento e transformação (ETL) dos relatórios em bruto (CSV).
 * **SQL Server (Localhost):** Armazenamento relacional e estruturação do modelo de dados.
-* **Power BI & DAX:** Visualização de dados, modelação semântica e UI/UX (Dark Mode temático).
+* **Power BI & DAX:** Visualização de dados, modelação semântica.
 * **Fontes de Dados:** Meta Ads (Facebook/Instagram), Google Analytics 4 (GA4), Mailchimp.
 
 ## Engenharia de Dados: A Decisão Arquitetónica
