@@ -38,7 +38,7 @@ O dashboard em Power BI foi desenhado com foco na experiência do utilizador e n
 *   Visitas (481) Inicio Formulario (43) Subscrições (16)
 
 
-adicionar foto dashboard
+[adicionar foto dashboard](https://github.com/fmcoelho91-prog/Ecos-Progressivos-Marketing-Analytics/blob/main/Dashboard.png)
 
 ## Insights e Próximos Passos (Recomendação Estratégica)
 A análise detalhada do funil revelou um estrangulamento claro: embora 43 utilizadores tenham demonstrado intenção ao iniciar o formulário, apenas 16 o concluíram. 
