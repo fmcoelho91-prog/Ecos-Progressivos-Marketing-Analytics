@@ -1,5 +1,7 @@
 # 🎸 Ecos Progressivos: End-to-End Marketing Performance Analytics
 
+[site Ecos Progressivos](https://ecosprogressivos.carrd.co/)
+
 ## Resumo do Projeto
 Este projeto demonstra a criação de um pipeline completo de dados (ETL, Armazenamento e Business Intelligence) para analisar o funil de conversão de uma campanha de marketing digital. O objetivo de negócio foi otimizar a captação de subscritores para uma newsletter de nicho (Rock Progressivo), integrando dados de três plataformas distintas.
 
