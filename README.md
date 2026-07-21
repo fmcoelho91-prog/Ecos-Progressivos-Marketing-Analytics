@@ -68,7 +68,7 @@ Entre os 43 inícios de formulário e as 16 subscrições confirmadas, o rácio 
 
 O dashboard apresenta os principais KPIs da campanha e permite alternar entre valores absolutos e percentagens do funil.
 
-![Dashboard de Marketing Analytics](Dashboard.png)
+![Dashboard de Marketing Analytics](https://github.com/fmcoelho91-prog/Ecos-Progressivos-Marketing-Analytics/blob/main/Dashboard.png)
 
 ## Principais Recomendações
 
