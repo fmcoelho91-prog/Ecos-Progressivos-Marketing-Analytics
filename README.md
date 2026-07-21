@@ -1,50 +1,92 @@
-# 🎸 Ecos Progressivos — End-to-End Marketing Performance Analytics
+# 🎸 Ecos Progressivos — Marketing Performance Analytics
 
-[Visitar o website Ecos Progressivos](https://ecosprogressivos.carrd.co/)
+[🌐 Visitar o site Ecos Progressivos](https://ecosprogressivos.carrd.co/)
 
-## Resumo do Projeto
+## Sobre o Projeto
 
-O Ecos Progressivos é um projeto end-to-end de Marketing Analytics desenvolvido para analisar o desempenho de uma campanha digital de captação de subscritores para uma newsletter dedicada ao rock progressivo.
+Projeto end-to-end de **Marketing Analytics** desenvolvido para analisar uma campanha real de captação de subscritores para uma newsletter dedicada ao rock progressivo.
 
-O projeto integra dados provenientes de Meta Ads, Google Analytics 4 e Mailchimp. Os dados foram tratados e consolidados em Python, preparados para armazenamento no SQL Server e utilizados na construção de um dashboard em Power BI.
+O projeto integra dados de **Meta Ads**, **Google Analytics 4** e **Mailchimp**, seguindo um pipeline completo:
 
-O objetivo de negócio consistiu em analisar o funil de aquisição, identificar os principais pontos de perda e propor melhorias para aumentar a captação de subscritores.
+```text
+Meta Ads + GA4 + Mailchimp → Python ETL → SQL Server → Power BI
+```
 
-## Competências Demonstradas
+Os dados foram importados e tratados em Python, consolidados num formato comum, carregados no SQL Server e utilizados na construção de um dashboard interativo em Power BI.
 
-`Marketing Analytics` · `ETL` · `Python` · `pandas` · `SQL Server` · `Power BI` · `DAX` · `Google Analytics 4` · `Meta Ads` · `Mailchimp` · `Business Intelligence` · `Data Storytelling`
+## Tecnologias
+
+- Python e Pandas
+- SQLAlchemy e pyodbc
+- SQL Server
+- Power BI e DAX
+- Meta Ads
+- Google Analytics 4
+- Mailchimp
+
+## O que foi desenvolvido
+
+- Criação da landing page e da campanha de Meta Ads;
+- Recolha de dados através do GA4 e Mailchimp;
+- Processo ETL em Python;
+- Integração das diferentes fontes num modelo vertical;
+- Carregamento dos dados no SQL Server;
+- Criação de medidas DAX;
+- Construção do dashboard em Power BI;
+- Análise do funil e desenvolvimento de recomendações.
 
 ## Resultados Principais
 
-- **Investimento Meta Ads:** 64,79 €
-- **Impressões:** 25 386
-- **Alcance:** 16 338 pessoas
-- **Resultados atribuídos pela Meta:** 7
-- **Sessões no website:** 532
-- **Novos utilizadores:** 481
-- **Inícios de formulário:** 43
-- **Subscrições confirmadas:** 16
-- **Taxa de início do formulário:** 8,08%
-- **Taxa de conversão por sessão:** 3,01%
-- **Rácio entre subscrições e inícios de formulário:** 37,21%
-- **Custo por resultado atribuído pela Meta:** 9,26 €
-- **Custo global por subscrição:** 4,05 €
+| Indicador | Resultado |
+|---|---:|
+| Investimento em Meta Ads | 64,79 € |
+| Impressões | 25 386 |
+| Alcance | 16 338 |
+| Sessões no website | 532 |
+| Novos utilizadores | 481 |
+| Inícios de formulário | 43 |
+| Subscrições confirmadas | 16 |
+| Taxa de conversão por sessão | 3,01% |
+| Custo por resultado Meta | 9,26 € |
+| Custo global por subscrição | 4,05 € |
 
-## Stack Tecnológica e Arquitetura
-
-- **Python e pandas:** importação, tratamento, transformação e consolidação dos relatórios CSV;
-- **SQLAlchemy e pyodbc:** ligação entre Python e SQL Server;
-- **SQL Server:** armazenamento da tabela analítica consolidada;
-- **Power BI e DAX:** construção dos indicadores e visualização do funil;
-- **Meta Ads:** dados de investimento e desempenho publicitário;
-- **Google Analytics 4:** dados de tráfego e eventos do website;
-- **Mailchimp:** validação das subscrições confirmadas.
-
-## Pipeline de Dados
+## Funil de Conversão
 
 ```text
-Meta Ads ───────┐
-                │
-GA4 ────────────┼──> Python ETL ──> SQL Server ──> Power BI
-                │
-Mailchimp ──────┘
+532 Sessões
+     ↓
+43 Inícios de formulário
+     ↓
+16 Subscrições confirmadas
+```
+
+A maior perda ocorreu antes do início do formulário: apenas **8,08% das sessões** avançaram para essa etapa.
+
+Entre os 43 inícios de formulário e as 16 subscrições confirmadas, o rácio foi de **37,21%**.
+
+## Dashboard
+
+O dashboard apresenta os principais KPIs da campanha e permite alternar entre valores absolutos e percentagens do funil.
+
+![Dashboard de Marketing Analytics](Dashboard.png)
+
+## Principais Recomendações
+
+- Implementar parâmetros UTM consistentes;
+- Validar eventos como `form_submit` e `sign_up`;
+- Melhorar a visibilidade e simplicidade do formulário;
+- Otimizar a experiência em dispositivos móveis;
+- Realizar testes A/B na landing page;
+- Testar Google Search como canal baseado na intenção de pesquisa.
+
+## Limitações
+
+As plataformas utilizam diferentes métodos de medição e atribuição. Por esse motivo, os 7 resultados atribuídos pela Meta não são diretamente equivalentes às 16 subscrições confirmadas no Mailchimp.
+
+Os inícios de formulário representam eventos do GA4 e não necessariamente utilizadores únicos.
+
+## Conclusão
+
+O projeto demonstra a integração de dados de marketing num pipeline completo, desde a recolha e transformação até ao armazenamento, visualização e interpretação.
+
+A análise mostrou que melhorar a campanha não depende apenas de gerar mais tráfego, mas também de otimizar a landing page, o formulário e a qualidade da medição.
