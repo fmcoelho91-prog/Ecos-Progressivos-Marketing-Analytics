@@ -1,1 +1,0 @@
-SELECT * FROM performance_marketing;
