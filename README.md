@@ -1,50 +1,50 @@
-# 🎸 Ecos Progressivos: End-to-End Marketing Performance Analytics
+# 🎸 Ecos Progressivos — End-to-End Marketing Performance Analytics
 
-[site Ecos Progressivos](https://ecosprogressivos.carrd.co/)
+[Visitar o website Ecos Progressivos](https://ecosprogressivos.carrd.co/)
 
 ## Resumo do Projeto
-Este projeto demonstra a criação de um pipeline completo de dados (ETL, Armazenamento e Business Intelligence) para analisar o funil de conversão de uma campanha de marketing digital. O objetivo de negócio foi otimizar a captação de subscritores para uma newsletter de nicho (Rock Progressivo), integrando dados de três plataformas distintas.
 
-Skills Demonstrated
- Marketing Analytics
- ETL
- Python
- SQL
- Power BI
- Google Analytics 4
- Meta Ads
- Business Intelligence
- Data Storytelling
+O Ecos Progressivos é um projeto end-to-end de Marketing Analytics desenvolvido para analisar o desempenho de uma campanha digital de captação de subscritores para uma newsletter dedicada ao rock progressivo.
 
-**Resultados Principais:**
-* **Investimento:** 64,79 €
-* **Taxa de Conversão da Página:** 3.3% (16 Subscrições Finais / 481 Visitas)
-* **Custo Por Aquisição (CPA):** 4,06 €
+O projeto integra dados provenientes de Meta Ads, Google Analytics 4 e Mailchimp. Os dados foram tratados e consolidados em Python, preparados para armazenamento no SQL Server e utilizados na construção de um dashboard em Power BI.
 
-## Tech Stack & Arquitetura
-* **Python (pandas, sqlalchemy, pyodbc):** Extração, tratamento e transformação (ETL) dos relatórios em bruto (CSV).
-* **SQL Server (Localhost):** Armazenamento relacional e estruturação do modelo de dados.
-* **Power BI & DAX:** Visualização de dados, modelação semântica.
-* **Fontes de Dados:** Meta Ads (Facebook/Instagram), Google Analytics 4 (GA4), Mailchimp.
+O objetivo de negócio consistiu em analisar o funil de aquisição, identificar os principais pontos de perda e propor melhorias para aumentar a captação de subscritores.
 
-## Engenharia de Dados: A Decisão Arquitetónica
-O maior desafio técnico foi unificar dados de plataformas com naturezas completamente diferentes (impressões de anúncios vs. eventos de web analytics vs. registos de e-mail). 
+## Competências Demonstradas
 
-**Solução:** Em vez de construir uma tabela horizontal, o script Python foi desenvolvido para transformar os dados num formato vertical/Long Format (data_registo | plataforma | metrica| valor). 
-Isto garante **escalabilidade total**: o repositório está preparado para receber novas plataformas de marketing no futuro sem necessidade de restruturar as tabelas SQL.
+`Marketing Analytics` · `ETL` · `Python` · `pandas` · `SQL Server` · `Power BI` · `DAX` · `Google Analytics 4` · `Meta Ads` · `Mailchimp` · `Business Intelligence` · `Data Storytelling`
 
-## Business Intelligence & Design Analítico
-O dashboard em Power BI foi desenhado com foco na experiência do utilizador e na clareza acionável, evitando o comum "ruído visual":
-* **O Problema do "Efeito Penhasco":** Inicialmente, colocar 25.386 impressões no mesmo funil de 16 subscrições esmagava a visualização.
-* **A Solução:** Separação do tráfego de topo de funil (Meta Ads) em cartões de KPI de leitura rápida, dedicando o gráfico de funil exclusivamente à jornada dentro da Landing Page:
-*   Visitas (481) Inicio Formulario (43) Subscrições (16)
+## Resultados Principais
 
+- **Investimento Meta Ads:** 64,79 €
+- **Impressões:** 25 386
+- **Alcance:** 16 338 pessoas
+- **Resultados atribuídos pela Meta:** 7
+- **Sessões no website:** 532
+- **Novos utilizadores:** 481
+- **Inícios de formulário:** 43
+- **Subscrições confirmadas:** 16
+- **Taxa de início do formulário:** 8,08%
+- **Taxa de conversão por sessão:** 3,01%
+- **Rácio entre subscrições e inícios de formulário:** 37,21%
+- **Custo por resultado atribuído pela Meta:** 9,26 €
+- **Custo global por subscrição:** 4,05 €
 
-![dashboard](https://github.com/fmcoelho91-prog/Ecos-Progressivos-Marketing-Analytics/blob/main/Dashboard.png)
+## Stack Tecnológica e Arquitetura
 
-## Insights e Próximos Passos (Recomendação Estratégica)
-A análise detalhada do funil revelou um estrangulamento claro: embora 43 utilizadores tenham demonstrado intenção ao iniciar o formulário, apenas 16 o concluíram. 
+- **Python e pandas:** importação, tratamento, transformação e consolidação dos relatórios CSV;
+- **SQLAlchemy e pyodbc:** ligação entre Python e SQL Server;
+- **SQL Server:** armazenamento da tabela analítica consolidada;
+- **Power BI e DAX:** construção dos indicadores e visualização do funil;
+- **Meta Ads:** dados de investimento e desempenho publicitário;
+- **Google Analytics 4:** dados de tráfego e eventos do website;
+- **Mailchimp:** validação das subscrições confirmadas.
 
-**Plano de Ação Proposto:**
-1. **Otimização de Fricção (CRO):** Reduzir os campos do formulário no Carrd.co ou implementar um sistema de subscrição em 1-clique para diminuir a taxa de abandono do formulário.
-2. **Ativação de Google Ads (Tráfego de Intenção vs. Interrupção):** A campanha Meta baseou-se em interrupção de *scroll*. O próximo passo estratégico é alocar orçamento para a Rede de Pesquisa do Google Ads (ex: *"newsletter vinil rock"*). A hipótese a testar é que o tráfego de pesquisa intencional terá uma taxa de conversão no formulário significativamente superior aos atuais 37% (16/43), baixando potencialmente o CPA global.
+## Pipeline de Dados
+
+```text
+Meta Ads ───────┐
+                │
+GA4 ────────────┼──> Python ETL ──> SQL Server ──> Power BI
+                │
+Mailchimp ──────┘
