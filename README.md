@@ -1,92 +1,97 @@
 # 🎸 Ecos Progressivos — Marketing Performance Analytics
 
-[🌐 Visitar o site Ecos Progressivos](https://ecosprogressivos.carrd.co/)
+[🌐 Visit the Ecos Progressivos website](https://ecosprogressivos.carrd.co/)
 
-## Sobre o Projeto
+## Project Overview
 
-Projeto end-to-end de **Marketing Analytics** desenvolvido para analisar uma campanha real de captação de subscritores para uma newsletter dedicada ao rock progressivo.
+This end-to-end **Marketing Analytics** project was developed to analyse a real subscriber acquisition campaign for a progressive rock newsletter.
 
-O projeto integra dados de **Meta Ads**, **Google Analytics 4** e **Mailchimp**, seguindo um pipeline completo:
+The project integrates data from **Meta Ads**, **Google Analytics 4** and **Mailchimp** through a complete analytics pipeline:
 
 ```text
 Meta Ads + GA4 + Mailchimp → Python ETL → SQL Server → Power BI
 ```
 
-Os dados foram importados e tratados em Python, consolidados num formato comum, carregados no SQL Server e utilizados na construção de um dashboard interativo em Power BI.
+The data was imported and transformed in Python, consolidated into a standardised structure, loaded into SQL Server and used to build an interactive Power BI dashboard.
 
-## Tecnologias
+## Technologies
 
-- Python e Pandas
-- SQLAlchemy e pyodbc
+- Python and Pandas
+- SQLAlchemy and pyodbc
 - SQL Server
-- Power BI e DAX
+- Power BI and DAX
 - Meta Ads
 - Google Analytics 4
 - Mailchimp
 
-## O que foi desenvolvido
+## What Was Developed
 
-- Criação da landing page e da campanha de Meta Ads;
-- Recolha de dados através do GA4 e Mailchimp;
-- Processo ETL em Python;
-- Integração das diferentes fontes num modelo vertical;
-- Carregamento dos dados no SQL Server;
-- Criação de medidas DAX;
-- Construção do dashboard em Power BI;
-- Análise do funil e desenvolvimento de recomendações.
+- Created the landing page and Meta Ads campaign
+- Collected website and subscriber data through GA4 and Mailchimp
+- Built an ETL process in Python
+- Integrated multiple data sources into a standardised vertical model
+- Loaded the transformed data into SQL Server
+- Created DAX measures
+- Built an interactive dashboard in Power BI
+- Analysed the conversion funnel and developed strategic recommendations
 
-## Resultados Principais
+## Key Results
 
-| Indicador | Resultado |
+| Metric | Result |
 |---|---:|
-| Investimento em Meta Ads | 64,79 € |
-| Impressões | 25 386 |
-| Alcance | 16 338 |
-| Sessões no website | 532 |
-| Novos utilizadores | 481 |
-| Inícios de formulário | 43 |
-| Subscrições confirmadas | 16 |
-| Taxa de conversão por sessão | 3,01% |
-| Custo por resultado Meta | 9,26 € |
-| Custo global por subscrição | 4,05 € |
+| Meta Ads investment | €64.79 |
+| Impressions | 25,386 |
+| Reach | 16,338 |
+| Website sessions | 532 |
+| New users | 481 |
+| Form starts | 43 |
+| Confirmed subscriptions | 16 |
+| Session conversion rate | 3.01% |
+| Cost per result attributed by Meta | €9.26 |
+| Overall cost per subscription | €4.05 |
 
-## Funil de Conversão
+## Conversion Funnel
 
 ```text
-532 Sessões
-     ↓
-43 Inícios de formulário
-     ↓
-16 Subscrições confirmadas
+532 Website Sessions
+        ↓
+43 Form Starts
+        ↓
+16 Confirmed Subscriptions
 ```
 
-A maior perda ocorreu antes do início do formulário: apenas **8,08% das sessões** avançaram para essa etapa.
+The largest drop-off occurred before the form-start stage: only **8.08% of website sessions** progressed to this point.
 
-Entre os 43 inícios de formulário e as 16 subscrições confirmadas, o rácio foi de **37,21%**.
+The ratio between the **43 form starts** and the **16 confirmed subscriptions** was **37.21%**.
+
+This value should be interpreted as an operational approximation because it compares GA4 events with unique confirmed contacts recorded in Mailchimp.
 
 ## Dashboard
 
-O dashboard apresenta os principais KPIs da campanha e permite alternar entre valores absolutos e percentagens do funil.
+The dashboard presents the main campaign KPIs and allows users to switch between absolute values and funnel percentages.
 
-![Dashboard de Marketing Analytics](https://github.com/fmcoelho91-prog/Ecos-Progressivos-Marketing-Analytics/blob/main/Dashboard.png)
+![Marketing Analytics Dashboard](https://github.com/fmcoelho91-prog/Ecos-Progressivos-Marketing-Analytics/blob/main/Dashboard.png)
 
-## Principais Recomendações
+## Key Recommendations
 
-- Implementar parâmetros UTM consistentes;
-- Validar eventos como `form_submit` e `sign_up`;
-- Melhorar a visibilidade e simplicidade do formulário;
-- Otimizar a experiência em dispositivos móveis;
-- Realizar testes A/B na landing page;
-- Testar Google Search como canal baseado na intenção de pesquisa.
+- Implement consistent UTM parameters across all campaign links
+- Validate events such as `form_start`, `form_submit` and `sign_up`
+- Improve the visibility and simplicity of the subscription form
+- Optimise the mobile user experience
+- Run A/B tests on the landing page
+- Strengthen alignment between the advertisements and the landing page
+- Test Google Search as an intent-based acquisition channel
 
-## Limitações
+## Limitations
 
-As plataformas utilizam diferentes métodos de medição e atribuição. Por esse motivo, os 7 resultados atribuídos pela Meta não são diretamente equivalentes às 16 subscrições confirmadas no Mailchimp.
+The platforms use different measurement and attribution methods. For this reason, the **7 results attributed by Meta** are not directly equivalent to the **16 confirmed subscriptions recorded in Mailchimp**.
 
-Os inícios de formulário representam eventos do GA4 e não necessariamente utilizadores únicos.
+Form starts represent GA4 events and do not necessarily correspond to unique users.
 
-## Conclusão
+The ratio between form starts and confirmed subscriptions should therefore be interpreted as a cross-platform operational approximation rather than a strict user-level conversion rate.
 
-O projeto demonstra a integração de dados de marketing num pipeline completo, desde a recolha e transformação até ao armazenamento, visualização e interpretação.
+## Conclusion
 
-A análise mostrou que melhorar a campanha não depende apenas de gerar mais tráfego, mas também de otimizar a landing page, o formulário e a qualidade da medição.
+This project demonstrates the integration of marketing data through a complete analytics pipeline, covering data collection, transformation, storage, visualisation and interpretation.
+
+The analysis showed that campaign improvement does not depend exclusively on generating more traffic. The clarity of the value proposition, landing-page experience, form visibility, mobile usability and measurement quality also have a direct impact on conversion performance.
